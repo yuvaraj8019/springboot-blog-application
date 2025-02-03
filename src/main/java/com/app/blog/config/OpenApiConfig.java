@@ -13,7 +13,7 @@ import io.swagger.v3.oas.annotations.security.SecuritySchemes;
 @Configuration
 @OpenAPIDefinition(info = @Info(title = "BLOG API", version = "1.0",
         description = "BLOG Application",
-        contact = @Contact(name = "Yashhhh")),
+        contact = @Contact(name = "Y")),
         security = {@SecurityRequirement(name = "bearerToken")}
 )
 @SecuritySchemes({
