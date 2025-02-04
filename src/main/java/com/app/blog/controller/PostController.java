@@ -87,10 +87,4 @@ public class PostController {
 		return new ResponseEntity<>(categoryPosts, HttpStatus.CREATED);
 	}
 
-//	@GetMapping("/user/{userId}/category/{categoryId}/posts")
-//	public ResponseEntity<List<PostDto>> getAllPostsByUserCategory(@PathVariable Integer userId,
-//			@PathVariable Integer categoryId, @RequestParam Integer pageNum, @RequestParam Integer pageSize) {
-//		List<PostDto> userCategoryPosts = postService.getAllPostsByUserCategory(userId, categoryId, pageNum, pageSize);
-//		return new ResponseEntity<>(userCategoryPosts, HttpStatus.CREATED);
-//	}
 }

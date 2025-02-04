@@ -38,20 +38,11 @@ public class SecurityConfig {
         http.csrf(csrf -> csrf.disable())
         		.authorizeHttpRequests(auth -> auth
         				.requestMatchers(NOAUTH_ALLOWED_URLS).permitAll()
-//        				.requestMatchers(HttpMethod.GET).permitAll()
-//        				.requestMatchers(HttpMethod.POST, "api/users/create").permitAll()
-//                .authorizeHttpRequests()
-//                .requestMatchers("/auth/**")
-//                .permitAll()
                 .anyRequest()
                 .authenticated())
         		.exceptionHandling(entrypoint -> entrypoint.authenticationEntryPoint(authenticationEntryPoint))
-//                .and()
-//                .sessionManagement()
-//                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         		.sessionManagement(sess -> sess
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-//                .and()
                 .authenticationProvider(authenticationProvider)
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
